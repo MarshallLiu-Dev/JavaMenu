@@ -74,7 +74,7 @@ public class principal {
 */		
 			
 			
-			//Vetores em Java:
+			/*Vetores em Java:
 			
 			Scanner ler = new Scanner(System.in);	
 			System.out.println("Menu");
@@ -117,6 +117,50 @@ public class principal {
 	        }
 	        
 	        System.out.println("Resposta = "+n3);
+		}*/
+
+			Scanner ler = new Scanner(System.in);
+			System.out.println("Menu");
+			System.out.println("[1]Somar");
+			System.out.println("[2]Subitrair");
+			System.out.println("[3]Multiplicar");
+			System.out.println("[4]Dividir");
+			System.out.println("Escolha uma opção");
+			
+			float n3 = 0;
+			float n[];
+			n = new float[2];
+			
+			int opc = ler.nextInt();
+			do {
+				System.out.println("Escolha uma opção valida");
+				opc=ler.nextInt();
+			}while (opc < 0 || opc > 4);
+			
+			int b;
+			for(b=0; b<2; b++){
+				System.out.println("Digite o "+(b+1)+"ªValor");
+				n[b]=ler.nextFloat();
+			}
+			//Ele está entrando na condição de opção valida mesmo adicionando uma opção valida.
+			//Switch case:
+			
+			switch(opc){
+				case 1:
+					n3 = n[0]+n[1];
+					break;
+				case 2:
+					n3 = n[0]-n[1];
+					break;
+				case 3:
+					n3 = n[0]*n[1];
+					break;
+				case 4:
+					n3 = n[0]/n[1];
+				break;
+			}
+
+			System.out.println("Resposta = "+ n3);
 		}
 	}
 
